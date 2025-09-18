@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface StickyScrollRevealProps {
   content: {
     title: string;
     description: string;
-    content?: React.ReactNode | any;
+    content?: React.ReactNode;
   }[];
   contentClassName?: string;
 }
@@ -18,7 +18,7 @@ export const StickyScrollReveal = ({
   contentClassName,
 }: StickyScrollRevealProps) => {
   const [activeCard, setActiveCard] = React.useState(0);
-  const ref = React.useRef<any>(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],

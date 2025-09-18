@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,8 +10,8 @@ import { StickyScrollReveal } from "@/components/ui/sticky-scroll-reveal";
 import { Heart, Award, Handshake, TrendingUp, FileText, Video, Users, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
 
 export default function Home() {
   // State for job filtering
@@ -165,10 +165,11 @@ export default function Home() {
       <section className="relative py-24 px-6 bg-gray-900 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img 
+          <Image 
             src="/images/IMG_8025_OPTIMIZED.jpg" 
             alt="ShoreAgents Office Background" 
-            className="w-full h-full object-cover opacity-30"
+            fill
+            className="object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-gray-900/90"></div>
         </div>
@@ -453,7 +454,7 @@ export default function Home() {
                     <span key={i} className="text-yellow-400 text-lg">⭐</span>
                   ))}
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="border-t pt-4">
                   <h5 className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</h5>
                   <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
@@ -601,16 +602,18 @@ export default function Home() {
             </h3>
             <p className="text-base text-gray-700 max-w-2xl mx-auto leading-relaxed">
               Experience a workplace that goes beyond expectations. Our modern office combines productivity with fun, 
-              creating an environment where you'll love to work every day.
+              creating an environment where you&apos;ll love to work every day.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 rounded-2xl hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <div className="h-32 w-full rounded-xl overflow-hidden mb-4 shadow-md">
-                <img 
+                <Image 
                   src="/images/IMG_6250.JPG" 
                   alt="Free Coffee" 
+                  width={300}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -622,9 +625,11 @@ export default function Home() {
             
             <div className="text-center p-6 rounded-2xl hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <div className="h-32 w-full rounded-xl overflow-hidden mb-4 shadow-md">
-                <img 
+                <Image 
                   src="/images/IMG_6593.JPG" 
                   alt="High-Speed Internet" 
+                  width={300}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -636,9 +641,11 @@ export default function Home() {
             
             <div className="text-center p-6 rounded-2xl hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <div className="h-32 w-full rounded-xl overflow-hidden mb-4 shadow-md">
-                <img 
+                <Image 
                   src="/images/IMG_8532.JPG" 
                   alt="Free Parking" 
+                  width={300}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -650,9 +657,11 @@ export default function Home() {
             
             <div className="text-center p-6 rounded-2xl hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <div className="h-32 w-full rounded-xl overflow-hidden mb-4 shadow-md">
-                <img 
+                <Image 
                   src="/images/IMG_8453.JPG" 
                   alt="Fun Events" 
+                  width={300}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -715,11 +724,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative h-80 rounded-2xl overflow-hidden">
-                  <img 
+                  <Image 
                     src="/images/IMG_8300.JPG" 
                     alt="Office Walkthrough" 
-                  className="w-full h-full object-cover"
-                />
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <div className="flex items-center space-x-2">
@@ -757,11 +767,12 @@ export default function Home() {
                     description: "Experience lightning-fast enterprise-grade fiber connection that ensures seamless communication and productivity. Our robust internet infrastructure supports all your work needs without interruption.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_6250.JPG" 
                           alt="ShoreAgents Office - High-Speed Internet Infrastructure" 
-                  className="w-full h-full object-cover"
-                />
+                          fill
+                          className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
                           <div className="text-2xl mb-2">🌐</div>
@@ -776,10 +787,11 @@ export default function Home() {
                     description: "Work with the latest computers and dual monitors in ergonomic setups designed for maximum productivity. Our workstations are equipped with powerful hardware to handle any task efficiently.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_6581.JPG" 
                           alt="ShoreAgents Office - Modern Workstations" 
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -795,11 +807,12 @@ export default function Home() {
                     description: "Open collaborative areas with ergonomic furniture designed for maximum productivity. Our modern workspace features comfortable seating, adjustable desks, and plenty of natural light to create an inspiring work environment.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_6593.JPG" 
                           alt="ShoreAgents Office - Modern Workspace" 
-                  className="w-full h-full object-cover"
-                />
+                          fill
+                          className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
                           <div className="text-2xl mb-2">🏢</div>
@@ -814,10 +827,11 @@ export default function Home() {
                     description: "Advanced VoIP and video conferencing systems that connect you seamlessly with clients and team members worldwide. Crystal-clear communication for professional interactions.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_6783.JPG" 
                           alt="ShoreAgents Office - Communication Systems" 
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -833,10 +847,11 @@ export default function Home() {
                     description: "Relax and unwind with gaming consoles and board games in our dedicated recreation area. Take breaks between work sessions to recharge and connect with colleagues in a fun, relaxed environment.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                <img 
+                <Image 
                   src="/images/IMG_8210.JPG" 
                           alt="ShoreAgents Office - Game Room" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -852,10 +867,11 @@ export default function Home() {
                     description: "24/7 monitoring and access control systems ensure your safety and data security. Advanced security measures protect both physical and digital assets.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_8300.JPG" 
                           alt="ShoreAgents Office - Security Systems" 
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -871,10 +887,11 @@ export default function Home() {
                     description: "High-quality coffee and beverages available 24/7 to keep you energized throughout your workday. Our premium coffee station features professional-grade equipment and a variety of beverage options.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                <img 
+                <Image 
                   src="/images/IMG_8370.JPG" 
                           alt="ShoreAgents Office - Premium Coffee Station" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -890,10 +907,11 @@ export default function Home() {
                     description: "Uninterrupted power supply systems ensure continuous operation even during power outages. Never lose work due to power interruptions with our reliable backup systems.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                <img 
+                <Image 
                   src="/images/IMG_8453.JPG" 
                           alt="ShoreAgents Office - Backup Power Systems" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -909,11 +927,12 @@ export default function Home() {
                     description: "State-of-the-art conference rooms with video conferencing capabilities for professional meetings and client presentations. Equipped with modern technology and comfortable seating for productive discussions.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_8532.JPG" 
                           alt="ShoreAgents Office - Meeting Rooms" 
-                  className="w-full h-full object-cover"
-                />
+                          fill
+                          className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
                           <div className="text-2xl mb-2">💼</div>
@@ -928,10 +947,11 @@ export default function Home() {
                     description: "Centralized air conditioning systems maintain optimal temperature and air quality for comfortable working conditions. Climate-controlled environment for year-round productivity.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_8552.JPG" 
                           alt="ShoreAgents Office - Climate Control" 
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
@@ -947,11 +967,12 @@ export default function Home() {
                     description: "Spacious cafeteria with comfortable seating where you can enjoy meals and socialize with colleagues. Our dining area provides a welcoming space for lunch breaks and team bonding moments.",
                     content: (
                       <div className="h-full w-full relative overflow-hidden">
-                        <img 
+                        <Image 
                           src="/images/IMG_6250.JPG" 
                           alt="ShoreAgents Office - Dining Area" 
-                  className="w-full h-full object-cover"
-                />
+                          fill
+                          className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 text-white">
                           <div className="text-2xl mb-2">🍽️</div>
@@ -1036,10 +1057,11 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
-                <img 
+                <Image 
                   src="/images/IMG_8370.JPG" 
                   alt="ShoreAgents Team" 
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
@@ -1063,9 +1085,9 @@ export default function Home() {
                 Our Mission Statement
               </h4>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                "To empower our employees with exceptional career opportunities while delivering outstanding 
+                &ldquo;To empower our employees with exceptional career opportunities while delivering outstanding 
                 BPO services to our clients worldwide. We are committed to fostering a culture of innovation, 
-                growth, and excellence that benefits both our team members and the communities we serve."
+                growth, and excellence that benefits both our team members and the communities we serve.&rdquo;
               </p>
             </div>
           </motion.div>
@@ -1242,10 +1264,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative h-64 rounded-xl overflow-hidden">
-                  <img 
+                  <Image 
                     src="/images/IMG_8300.JPG" 
                     alt="Clark Freeport Zone Office" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -1379,11 +1402,11 @@ export default function Home() {
             viewport={{ once: true }}
           >
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            DON'T SEE YOUR PERFECT ROLE?
+            DON&apos;T SEE YOUR PERFECT ROLE?
           </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-              We're always looking for talented individuals. Submit your comprehensive application 
-              and we'll keep you in mind for future opportunities!
+              We&apos;re always looking for talented individuals. Submit your comprehensive application 
+              and we&apos;ll keep you in mind for future opportunities!
             </p>
           </motion.div>
 
@@ -1493,8 +1516,8 @@ export default function Home() {
                       <option value="high-school">High School</option>
                       <option value="vocational">Vocational</option>
                       <option value="associate">Associate Degree</option>
-                      <option value="bachelor">Bachelor's Degree</option>
-                      <option value="master">Master's Degree</option>
+                      <option value="bachelor">Bachelor&apos;s Degree</option>
+                      <option value="master">Master&apos;s Degree</option>
                     </select>
                   </div>
                   <div className="space-y-2">
@@ -1715,7 +1738,7 @@ export default function Home() {
               OUR HIRING PROCESS
             </h3>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-              Here's a step-by-step guide on how our hiring process works.
+              Here&apos;s a step-by-step guide on how our hiring process works.
             </p>
           </div>
 
@@ -2081,7 +2104,7 @@ export default function Home() {
               </summary>
               <div className="px-6 pb-6 pt-0">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Depending on clients' business needs, we offer Day, Night, and Mid shifts.
+                  Depending on clients&apos; business needs, we offer Day, Night, and Mid shifts.
                 </p>
               </div>
             </motion.details>
@@ -2226,7 +2249,7 @@ export default function Home() {
                   There are 3 interviews in the recruitment process:<br />
                   1.) The verification interview is done via phone call.<br />
                   2.) The company interview is carried out through Zoom meetings.<br />
-                  3.) The client interview happens on various online meeting platforms, depending on the client's preference.
+                  3.) The client interview happens on various online meeting platforms, depending on the client&apos;s preference.
                 </p>
               </div>
             </motion.details>
@@ -2261,7 +2284,7 @@ export default function Home() {
             >
               <summary className="p-6 cursor-pointer list-none">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  What is the company's culture?
+                  What is the company&apos;s culture?
                 </h4>
               </summary>
               <div className="px-6 pb-6 pt-0">
