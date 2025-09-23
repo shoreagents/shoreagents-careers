@@ -5,10 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { HeroParallax } from "@/components/ui/hero-parallax";
 import { StickyScrollReveal } from "@/components/ui/sticky-scroll-reveal";
-import { Heart, Award, Handshake, TrendingUp, FileText, Video, Users, CheckCircle } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Heart, Award, Handshake, TrendingUp, FileText, Users, CheckCircle } from "lucide-react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
@@ -19,84 +18,6 @@ export default function Home() {
   // State for form expansion
   const [showFullForm, setShowFullForm] = useState(false);
 
-  // Sample career opportunities data for the parallax effect
-  const careerOpportunities = [
-    {
-      title: "Senior Software Engineer",
-      link: "#",
-      thumbnail: "/images/IMG_6783.JPG"
-    },
-    {
-      title: "Product Manager",
-      link: "#",
-      thumbnail: "/images/IMG_6250.JPG"
-    },
-    {
-      title: "UX Designer",
-      link: "#",
-      thumbnail: "/images/IMG_8370.JPG"
-    },
-    {
-      title: "Data Scientist",
-      link: "#",
-      thumbnail: "/images/IMG_8210.JPG"
-    },
-    {
-      title: "DevOps Engineer",
-      link: "#",
-      thumbnail: "/images/IMG_8532.JPG"
-    },
-    {
-      title: "Marketing Manager",
-      link: "#",
-      thumbnail: "/images/IMG_8453.JPG"
-    },
-    {
-      title: "Sales Director",
-      link: "#",
-      thumbnail: "/images/IMG_6581.JPG"
-    },
-    {
-      title: "Frontend Developer",
-      link: "#",
-      thumbnail: "/images/IMG_8552.JPG"
-    },
-    {
-      title: "Backend Developer",
-      link: "#",
-      thumbnail: "/images/IMG_8300.JPG"
-    },
-    {
-      title: "Full Stack Engineer",
-      link: "#",
-      thumbnail: "/images/IMG_6593.JPG"
-    },
-    {
-      title: "AI/ML Engineer",
-      link: "#",
-      thumbnail: "/images/IMG_6783.JPG"
-    },
-    {
-      title: "Cybersecurity Analyst",
-      link: "#",
-      thumbnail: "/images/IMG_6250.JPG"
-    },
-    {
-      title: "Cloud Architect",
-      link: "#",
-      thumbnail: "/images/IMG_8370.JPG"
-    },
-    {
-      title: "Mobile Developer",
-      link: "#",
-      thumbnail: "/images/IMG_8210.JPG"
-    },
-    {
-      title: "Technical Writer",
-      link: "#",
-      thumbnail: "/images/IMG_8532.JPG"
-    }
-  ];
 
   // Job data with shift information
   const jobs = [
@@ -384,10 +305,11 @@ export default function Home() {
                 description: "Experience cutting-edge technology and modern equipment that empowers your productivity. Our state-of-the-art infrastructure ensures you have everything you need to excel in your role.",
                 content: (
                   <div className="h-full w-full relative overflow-hidden">
-                    <img 
+                    <Image 
                       src="/images/IMG_6581.JPG" 
                       alt="ShoreAgents Office - Modern Technology" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
@@ -403,10 +325,11 @@ export default function Home() {
                 description: "Join a company that invests in your development. We provide comprehensive training programs, mentorship opportunities, and clear career advancement paths.",
                 content: (
                   <div className="h-full w-full relative overflow-hidden">
-                    <img 
+                    <Image 
                       src="/images/IMG_6593.JPG" 
                       alt="ShoreAgents Office - Professional Development" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
@@ -422,10 +345,11 @@ export default function Home() {
                 description: "Work in a modern, comfortable office space designed for productivity and collaboration. Enjoy premium amenities and a supportive team culture.",
                 content: (
                   <div className="h-full w-full relative overflow-hidden">
-                    <img 
+                    <Image 
                       src="/images/IMG_8300.JPG" 
                       alt="ShoreAgents Office - Work Environment" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
@@ -441,10 +365,11 @@ export default function Home() {
                 description: "Enjoy comprehensive benefits including health insurance, performance bonuses, team events, and government-mandated benefits. We take care of our team members.",
                 content: (
                   <div className="h-full w-full relative overflow-hidden">
-                    <img 
+                    <Image 
                       src="/images/IMG_8210.JPG" 
                       alt="ShoreAgents Office - Benefits & Amenities" 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                     <div className="absolute bottom-4 left-4 text-white">
@@ -529,11 +454,12 @@ export default function Home() {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <img 
-                    src={testimonial.profileImage} 
-                    alt={testimonial.name}
-                    className="w-full h-full object-cover"
-                  />
+                    <Image 
+                      src={testimonial.profileImage} 
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
                 </motion.div>
 
                 <motion.div 
@@ -1683,7 +1609,7 @@ export default function Home() {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Our comprehensive training program typically lasts 2-3 weeks, covering product knowledge, communication skills, and company policies to ensure you're fully prepared for success.
+                  Our comprehensive training program typically lasts 2-3 weeks, covering product knowledge, communication skills, and company policies to ensure you&apos;re fully prepared for success.
                 </p>
               </div>
             </motion.details>
