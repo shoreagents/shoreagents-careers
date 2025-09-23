@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Block all search engine crawlers from accessing any part of the site
+# This prevents indexing of the entire website

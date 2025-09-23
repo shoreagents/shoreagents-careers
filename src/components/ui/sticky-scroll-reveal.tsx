@@ -28,7 +28,15 @@ export const StickyScrollReveal = ({
 
   React.useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      const cardsBreakpoints = content.map((_, index) => index / cardLength);
+      // More sensitive breakpoint calculation
+      const cardsBreakpoints = content.map((_, index) => {
+        // Create more granular breakpoints for better sensitivity
+        const baseProgress = index / cardLength;
+        const nextProgress = (index + 1) / cardLength;
+        const midPoint = (baseProgress + nextProgress) / 2;
+        return midPoint;
+      });
+      
       const closestBreakpointIndex = cardsBreakpoints.reduce(
         (acc, breakpoint, index) => {
           const distance = Math.abs(latest - breakpoint);
@@ -39,7 +47,10 @@ export const StickyScrollReveal = ({
         },
         0
       );
-      setActiveCard(closestBreakpointIndex);
+      
+      // Ensure we don't go beyond the content length
+      const newActiveCard = Math.min(closestBreakpointIndex, cardLength - 1);
+      setActiveCard(newActiveCard);
     });
 
     return () => unsubscribe();
@@ -59,9 +70,14 @@ export const StickyScrollReveal = ({
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: 1,
+                  scale: activeCard === index ? 1.05 : 1,
                 }}
-                className="text-2xl font-bold text-gray-200"
+                transition={{
+                  duration: 0.3,
+                  ease: "easeInOut"
+                }}
+                className="text-2xl font-bold text-white"
               >
                 {item.title}
               </motion.div>
@@ -70,9 +86,14 @@ export const StickyScrollReveal = ({
                   opacity: 0,
                 }}
                 animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
+                  opacity: 1,
+                  y: activeCard === index ? 0 : 10,
                 }}
-                className="text-lg text-gray-400 max-w-sm mt-10"
+                transition={{
+                  duration: 0.3,
+                  ease: "easeInOut"
+                }}
+                className="text-lg text-white max-w-sm mt-10"
               >
                 {item.description}
               </motion.div>
@@ -85,6 +106,10 @@ export const StickyScrollReveal = ({
           "hidden lg:block h-60 w-80 rounded-md sticky top-10 overflow-hidden",
           contentClassName
         )}
+        key={activeCard}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         {content[activeCard].content ?? null}
       </motion.div>
