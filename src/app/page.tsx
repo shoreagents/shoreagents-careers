@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { StickyScrollReveal } from "@/components/ui/sticky-scroll-reveal";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Heart, Award, Handshake, TrendingUp, FileText, Users, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -450,16 +451,19 @@ export default function Home() {
               >
                 {/* Profile Image */}
                 <motion.div 
-                  className="w-16 h-16 mx-auto mb-3 rounded-full overflow-hidden border-2 border-white"
+                  className="mx-auto mb-3"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
-                    <Image 
+                  <Avatar className="w-16 h-16 border-2 border-white">
+                    <AvatarImage 
                       src={testimonial.profileImage} 
                       alt={testimonial.name}
-                      fill
-                      className="object-cover"
                     />
+                    <AvatarFallback className="bg-gray-600 text-white text-lg font-semibold">
+                      {testimonial.name.charAt(0)}
+                    </AvatarFallback>
+                  </Avatar>
                 </motion.div>
 
                 <motion.div 
