@@ -100,19 +100,18 @@ export default function Home() {
                 Reviews
               </button>
               <button 
-                onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-300 font-medium"
-              >
-                Apply Now
-              </button>
-              <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors duration-300 font-medium"
               >
                 Contact
               </button>
             </nav>
-            <Button className="shrink-0 bg-blue-600 hover:bg-blue-700">Get Started</Button>
+            <Button 
+              onClick={() => document.getElementById('application')?.scrollIntoView({ behavior: 'smooth' })}
+              className="shrink-0 bg-blue-600 hover:bg-blue-700"
+            >
+              Apply Now
+            </Button>
           </div>
         </div>
       </header>
@@ -400,7 +399,7 @@ export default function Home() {
               What Our Employees Say
             </h3>
             <p className="text-lg text-white">
-              Hear from our amazing team members
+              Hear from our team members on what makes ShoreAgents Careers a great place to work.
             </p>
           </motion.div>
 
@@ -858,214 +857,6 @@ export default function Home() {
             </div>
       </section>
 
-      {/* Mission Statement and Benefits Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
-        <div className="container mx-auto max-w-7xl">
-
-          {/* Mission Statement */}
-          <motion.div 
-            className="mb-20 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white dark:bg-gray-800 rounded-3xl p-12 shadow-xl max-w-4xl mx-auto">
-              <h4 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Our Mission Statement
-              </h4>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                &ldquo;To empower our employees with exceptional career opportunities while delivering outstanding 
-                BPO services to our clients worldwide. We are committed to fostering a culture of innovation, 
-                growth, and excellence that benefits both our team members and the communities we serve.&rdquo;
-              </p>
-              </div>
-          </motion.div>
-
-          {/* Employee Benefits */}
-          <motion.div 
-            className="mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              Comprehensive Benefits Package
-            </h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Health Insurance</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Comprehensive HMO coverage for you and your dependents</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
-                  <Award className="w-6 h-6 text-green-600 dark:text-green-400" />
-            </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Performance Bonuses</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Monthly incentives and performance-based rewards</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-              </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Career Development</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Training programs and advancement opportunities</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Team Events</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Monthly team building and celebration activities</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mb-4">
-                  <FileText className="w-6 h-6 text-red-600 dark:text-red-400" />
-              </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Government Benefits</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">SSS, PAGIBIG, and PhilHealth contributions</p>
-              </motion.div>
-
-              <motion.div 
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mb-4">
-                  <Handshake className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-            </div>
-                <h5 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Work-Life Balance</h5>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">Flexible schedules and supportive work environment</p>
-              </motion.div>
-          </div>
-          </motion.div>
-
-          {/* Professional Development Programs */}
-          <motion.div 
-            className="mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              Professional Development Programs
-            </h4>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Skills Training</h5>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Communication and soft skills workshops</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Technical skills certification programs</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Leadership development courses</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Industry-specific training modules</span>
-                  </li>
-                </ul>
-        </div>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Career Advancement</h5>
-                <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Internal promotion opportunities</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Mentorship programs</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Cross-departmental projects</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>Performance-based salary increases</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Office Locations */}
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h4 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
-              Our Modern Office Location
-            </h4>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="text-left">
-                  <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Clark Freeport Zone</h5>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Located in the heart of Clark Freeport Zone, Angeles City, our modern office provides easy access 
-                    and a professional environment for all our employees.
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">Free shuttle service from Clark Main Gate</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">Free parking for all employees</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">Modern facilities and equipment</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative h-64 rounded-xl overflow-hidden">
-                  <Image 
-                    src="/images/IMG_8300.JPG" 
-                    alt="Clark Freeport Zone Office" 
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Current Openings Section */}
       <section className="py-16 px-4 bg-gray-900">
@@ -1180,7 +971,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced General Application Section */}
-      <section id="application" className="py-16 px-6 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+      <section id="application" className="py-16 px-6 bg-gray-900">
         <div className="container mx-auto max-w-3xl">
           <motion.div 
             className="text-center mb-8"
@@ -1189,12 +980,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
-            DON&apos;T SEE YOUR PERFECT ROLE?
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Candidate Careers Form
           </h3>
-            <p className="text-base text-gray-600 dark:text-gray-300 mb-6 max-w-xl mx-auto">
-              We&apos;re always looking for talented individuals. Submit your application 
-              and we&apos;ll keep you in mind for future opportunities!
+            <p className="text-base text-white mb-6 max-w-4xl mx-auto">
+              <strong>Work with us!</strong> Unlimited earning potential while you upskill your career working for the fastest growing Real Estate BPO company located in the Clark Freeport Zone.
             </p>
           </motion.div>
 
@@ -1206,169 +996,284 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <form className="space-y-6">
-              {/* Personal Information - Always Visible */}
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Personal Information</h4>
-                <div className="grid md:grid-cols-2 gap-4">
+            <form className="space-y-4">
+              {/* Essential Fields - Always Visible */}
+              <div className="space-y-4">
+                {/* Personal Information */}
+                <div className="grid md:grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <Label htmlFor="firstName" className="text-sm text-gray-700 dark:text-gray-300">First Name *</Label>
+                    <Label htmlFor="fullName" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Full Name *
+                    </Label>
                     <Input 
-                      id="firstName" 
-                      placeholder="John" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
+                      id="fullName" 
+                      placeholder="Enter your full name" 
+                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
                       required 
                     />
-          </div>
+                  </div>
                   <div className="space-y-1">
-                    <Label htmlFor="lastName" className="text-sm text-gray-700 dark:text-gray-300">Last Name *</Label>
-                    <Input 
-                      id="lastName" 
-                      placeholder="Doe" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
-                      required 
-                    />
-        </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="email" className="text-sm text-gray-700 dark:text-gray-300">Email Address *</Label>
+                    <Label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Email *
+                    </Label>
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="john.doe@email.com" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
+                      placeholder="Enter your email" 
+                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
                       required 
                     />
-          </div>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <Label htmlFor="phone" className="text-sm text-gray-700 dark:text-gray-300">Phone Number *</Label>
+                    <Label htmlFor="phone" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Phone *
+                    </Label>
                     <Input 
                       id="phone" 
-                      placeholder="+63 912 345 6789" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
+                      placeholder="Enter your mobile number" 
+                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
                       required 
                     />
-              </div>
-              </div>
-            </div>
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="shiftPreference" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Preferred Shift *
+                    </Label>
+                    <select 
+                      id="shiftPreference" 
+                      className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                      required
+                    >
+                      <option value="">Select shift</option>
+                      <option value="dayshift">Dayshift</option>
+                      <option value="nightshift">Nightshift</option>
+                      <option value="flexible">Flexible</option>
+                    </select>
+                  </div>
+                </div>
 
-              {/* Collapsible Section */}
-              <div className={`transition-all duration-500 overflow-hidden ${showFullForm ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-                {/* Professional Experience */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Professional Experience</h4>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-1">
-                      <Label htmlFor="experience" className="text-sm text-gray-700 dark:text-gray-300">Years of Experience</Label>
-                      <Input 
-                        id="experience" 
-                        placeholder="2-3 years" 
-                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
-                      />
+                {/* Resume Upload */}
+                <div className="space-y-1">
+                  <Label htmlFor="resume" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    Resume *
+                  </Label>
+                  <Input 
+                    id="resume" 
+                    type="file" 
+                    accept=".pdf,.doc,.docx" 
+                    className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
+                    required 
+                  />
+                </div>
               </div>
+
+              {/* Collapsible Additional Fields */}
+              <div className={`transition-all duration-500 overflow-hidden ${showFullForm ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  {/* Why do you want a job with us? */}
+                  <div className="space-y-1">
+                    <Label htmlFor="whyJob" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Why do you want a job with us? *
+                    </Label>
+                    <Textarea 
+                      id="whyJob" 
+                      placeholder="In one sentence tell us why you want a job with us" 
+                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 min-h-[60px] py-2 text-sm"
+                      required 
+                    />
+                  </div>
+
+                  {/* Additional Personal Info */}
+                  <div className="grid md:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <Label htmlFor="currentRole" className="text-sm text-gray-700 dark:text-gray-300">Current Role</Label>
+                      <Label htmlFor="nickname" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Nickname
+                      </Label>
                       <Input 
-                        id="currentRole" 
-                        placeholder="Customer Service Representative" 
-                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
+                        id="nickname" 
+                        placeholder="Name you want to be called" 
+                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
                       />
                     </div>
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="skills" className="text-sm text-gray-700 dark:text-gray-300">Key Skills</Label>
-                    <Textarea 
-                      id="skills" 
-                      placeholder="Customer service, communication, problem-solving..." 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 min-h-[80px] py-2"
-                    />
-              </div>
-            </div>
-
-                {/* Additional Information */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Additional Information</h4>
-                  <div className="space-y-1">
-                    <Label htmlFor="availability" className="text-sm text-gray-700 dark:text-gray-300">Availability</Label>
-                    <Input 
-                      id="availability" 
-                      placeholder="Immediate / 2 weeks notice" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
-                    />
-              </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="coverLetter" className="text-sm text-gray-700 dark:text-gray-300">Cover Letter</Label>
-                    <Textarea 
-                      id="coverLetter" 
-                      placeholder="Tell us why you want to join ShoreAgents..." 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 min-h-[80px] py-2"
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <Label htmlFor="resume" className="text-sm text-gray-700 dark:text-gray-300">Resume/CV</Label>
-                    <Input 
-                      id="resume" 
-                      type="file" 
-                      accept=".pdf,.doc,.docx" 
-                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
-                    />
-              </div>
-            </div>
-
-                {/* Preferences */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Preferences</h4>
-                  <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <Label htmlFor="shiftPreference" className="text-sm text-gray-700 dark:text-gray-300">Shift Preference</Label>
+                      <Label htmlFor="roleSuitability" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Most Suited Role *
+                      </Label>
                       <select 
-                        id="shiftPreference" 
-                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        id="roleSuitability" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                        required
                       >
-                        <option value="">Select preferred shift</option>
-                        <option value="morning">Morning Shift (6AM - 3PM)</option>
-                        <option value="afternoon">Afternoon Shift (2PM - 11PM)</option>
-                        <option value="night">Night Shift (10PM - 7AM)</option>
-                        <option value="flexible">Flexible</option>
+                        <option value="">Select role</option>
+                        <option value="customer-service">Customer Service</option>
+                        <option value="sales">Sales Development</option>
+                        <option value="virtual-assistant">Virtual Assistant</option>
+                        <option value="real-estate">Real Estate Support</option>
+                        <option value="other">Other</option>
                       </select>
-              </div>
+                    </div>
+                  </div>
+
+                  {/* Salary Information */}
+                  <div className="grid md:grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <Label htmlFor="salaryExpectation" className="text-sm text-gray-700 dark:text-gray-300">Salary Expectation</Label>
+                      <Label htmlFor="salaryExpectation" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Salary Expectation
+                      </Label>
                       <Input 
                         id="salaryExpectation" 
-                        placeholder="₱25,000 - ₱35,000" 
-                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2"
+                        placeholder="Monthly salary expectation" 
+                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <Label htmlFor="currentSalary" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Current Salary
+                      </Label>
+                      <Input 
+                        id="currentSalary" 
+                        placeholder="Current monthly salary" 
+                        className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
                       />
                     </div>
                   </div>
-              </div>
-            </div>
 
-              {/* Show All Button */}
-              {!showFullForm && (
-                <div className="text-center pt-2">
-                  <motion.button 
-                    type="button"
-                    onClick={() => setShowFullForm(true)}
-                    className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Show All Fields
-                  </motion.button>
-              </div>
-              )}
+                  {/* Skills Rating */}
+                  <div className="grid md:grid-cols-3 gap-3">
+                    <div className="space-y-1">
+                      <Label htmlFor="typingSpeed" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Typing Speed *
+                      </Label>
+                      <select 
+                        id="typingSpeed" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                        required
+                      >
+                        <option value="">Select speed</option>
+                        <option value="20-30">20-30 WPM</option>
+                        <option value="30-40">30-40 WPM</option>
+                        <option value="40-50">40-50 WPM</option>
+                        <option value="50+">50+ WPM</option>
+                      </select>
+                    </div>
+                    <div className="space-y-1">
+                      <Label htmlFor="englishSpeaking" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        English Speaking *
+                      </Label>
+                      <select 
+                        id="englishSpeaking" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                        required
+                      >
+                        <option value="">Rate 1-5</option>
+                        <option value="1">1 - Beginner</option>
+                        <option value="2">2 - Basic</option>
+                        <option value="3">3 - Intermediate</option>
+                        <option value="4">4 - Advanced</option>
+                        <option value="5">5 - Fluent</option>
+                      </select>
+                    </div>
+                    <div className="space-y-1">
+                      <Label htmlFor="englishWriting" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        English Writing *
+                      </Label>
+                      <select 
+                        id="englishWriting" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                        required
+                      >
+                        <option value="">Rate 1-5</option>
+                        <option value="1">1 - Beginner</option>
+                        <option value="2">2 - Basic</option>
+                        <option value="3">3 - Intermediate</option>
+                        <option value="4">4 - Advanced</option>
+                        <option value="5">5 - Fluent</option>
+                      </select>
+                    </div>
+                  </div>
 
-              {/* Submit Button */}
-              <div className="text-center pt-4">
+                  {/* Additional Fields */}
+                  <div className="grid md:grid-cols-2 gap-3">
+                    <div className="space-y-1">
+                      <Label htmlFor="bpoExperience" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        BPO Experience
+                      </Label>
+                      <select 
+                        id="bpoExperience" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                      >
+                        <option value="">Select experience</option>
+                        <option value="yes-real-estate">Yes, Real Estate</option>
+                        <option value="yes-other">Yes, Other BPO</option>
+                        <option value="no">No Experience</option>
+                      </select>
+                    </div>
+                    <div className="space-y-1">
+                      <Label htmlFor="howFoundUs" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        How did you find us? *
+                      </Label>
+                      <select 
+                        id="howFoundUs" 
+                        className="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                        required
+                      >
+                        <option value="">Select source</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="jobstreet">JobStreet</option>
+                        <option value="indeed">Indeed</option>
+                        <option value="referral">Referral</option>
+                        <option value="walk-in">Walk-in</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Profile Picture */}
+                  <div className="space-y-1">
+                    <Label htmlFor="profilePicture" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Profile Picture
+                    </Label>
+                    <Input 
+                      id="profilePicture" 
+                      type="file" 
+                      accept="image/*" 
+                      className="rounded-lg border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 py-2 text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Show More/Less Button */}
+              <div className="text-center pt-2">
                 <motion.button 
-                  type="submit"
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  type="button"
+                  onClick={() => setShowFullForm(!showFullForm)}
+                  className="px-4 py-2 text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Submit Application
+                  {showFullForm ? 'Show Less' : 'Show More Fields'}
                 </motion.button>
               </div>
+
+              {/* Submit Button - Only show when form is expanded */}
+              {showFullForm && (
+                <div className="text-center pt-4">
+                  <motion.button 
+                    type="submit"
+                    className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Submit Application
+                  </motion.button>
+                </div>
+              )}
 
             </form>
           </motion.div>
@@ -1537,8 +1442,8 @@ export default function Home() {
             </h3>
           </motion.div>
 
-          <div className="space-y-6">
-            {/* FAQ Item 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Row 1 - First 5 FAQs */}
             <motion.details 
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -1547,18 +1452,17 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <summary className="p-6 cursor-pointer list-none">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
                   What shifts do you offer?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We offer morning shift (6AM-3PM), afternoon shift (2PM-11PM), and night shift (10PM-7AM) to accommodate different schedules and preferences.
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Depending on clients' business needs, we offer Day, Night, and Mid shifts.
                 </p>
               </div>
             </motion.details>
 
-            {/* FAQ Item 2 */}
             <motion.details 
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -1567,18 +1471,17 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <summary className="p-6 cursor-pointer list-none">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  What are the requirements to apply?
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  Do I need experience to be hired?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We require at least a high school diploma, good communication skills in English, basic computer literacy, and a positive attitude. Previous BPO experience is preferred but not required.
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  It would depend on the role the client is hiring for. Some may require experience, and others may not.
                 </p>
               </div>
             </motion.details>
 
-            {/* FAQ Item 3 */}
             <motion.details 
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -1587,18 +1490,17 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <summary className="p-6 cursor-pointer list-none">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  What benefits do you offer?
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  Do you offer a permanent WFH setup?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We offer competitive salary, health insurance, performance bonuses, free coffee, high-speed internet, free parking, and monthly team building events.
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  No, all of our staff are required to work in the office. However, we organize monthly events and activities as one of the perks of our team for working in the office.
                 </p>
               </div>
             </motion.details>
 
-            {/* FAQ Item 4 */}
             <motion.details 
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -1607,18 +1509,17 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <summary className="p-6 cursor-pointer list-none">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  How long is the training period?
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  How much is the salary range at ShoreAgents?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Our comprehensive training program typically lasts 2-3 weeks, covering product knowledge, communication skills, and company policies to ensure you&apos;re fully prepared for success.
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  The salary offered would depend on your level of experience and the relevance of your knowledge to the role.
                 </p>
               </div>
             </motion.details>
 
-            {/* FAQ Item 5 */}
             <motion.details 
               className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
@@ -1627,13 +1528,114 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <summary className="p-6 cursor-pointer list-none">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Is there room for career growth?
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  Do you offer a shuttle service?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Absolutely! We provide clear advancement pathways, mentorship programs, and internal promotion opportunities based on performance and dedication.
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  We provide shuttle service for our day shift employees from a designated pick-up location to our office and vice versa.
+                </p>
+              </div>
+            </motion.details>
+
+            {/* Row 2 - Last 5 FAQs */}
+            <motion.details 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <summary className="p-6 cursor-pointer list-none">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  What is the most common time for the day shift and night shift?
+                </h4>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Day shift: 6 AM - 3 PM<br />
+                  Night shift: 8 PM - 5 AM | 9 PM - 6 AM | 11 PM - 8 AM<br />
+                  Details above may vary depending on the client.
+                </p>
+              </div>
+            </motion.details>
+
+            <motion.details 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <summary className="p-6 cursor-pointer list-none">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  Do I have to submit the introduction video?
+                </h4>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Yes, the introduction video is one of the essential requirements of the application process; hence, accomplishing it is necessary.
+                </p>
+              </div>
+            </motion.details>
+
+            <motion.details 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <summary className="p-6 cursor-pointer list-none">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  Where will the interview take place?
+                </h4>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  There are 3 interviews in the recruitment process:<br />
+                  1.) The verification interview is done via phone call.<br />
+                  2.) The company interview is carried out through Zoom meetings.<br />
+                  3.) The client interview happens on various online meeting platforms, depending on the client's preference.
+                </p>
+              </div>
+            </motion.details>
+
+            <motion.details 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              viewport={{ once: true }}
+            >
+              <summary className="p-6 cursor-pointer list-none">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  What are the company benefits?
+                </h4>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  HMO, unlimited coffee (for on-site employees), free shuttle service from and to Clark Main Gate, government-mandated contributions (SSS, PAGIBIG, PhilHealth), and company events.
+                </p>
+              </div>
+            </motion.details>
+
+            <motion.details 
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              viewport={{ once: true }}
+            >
+              <summary className="p-6 cursor-pointer list-none">
+                <h4 className="text-base font-semibold text-gray-900 dark:text-white">
+                  What is the company's culture?
+                </h4>
+              </summary>
+              <div className="px-6 pb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  ShoreAgents epitomizes BPO work-life balance, prioritizing employee diversity and fulfilling its promise as the NumberFun workplace with enjoyable events and surprises.
                 </p>
               </div>
             </motion.details>
@@ -1644,12 +1646,19 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="h-8 w-8 rounded-lg bg-blue-600"></div>
-            <h4 className="text-xl font-bold">ShoreAgents</h4>
+          <div className="flex items-center justify-center mb-4">
+            <Image 
+              src="/images/Artwork 33.png" 
+              alt="ShoreAgents Logo" 
+              width={90}
+              height={90}
+              className="h-11 w-auto"
+              quality={100}
+              priority
+            />
           </div>
           <p className="text-gray-400 mb-6">
-            Connecting talent with opportunity, one career at a time.
+            Building Brighter Futures
           </p>
           <div className="flex justify-center space-x-6 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
