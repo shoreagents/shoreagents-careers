@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { StickyScrollReveal } from "@/components/ui/sticky-scroll-reveal";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Heart, Award, Handshake, TrendingUp, FileText, Users, CheckCircle } from "lucide-react";
+import { Award } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
@@ -291,7 +291,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose ShoreAgents?
+              WHY CHOOSE SHOREAGENTS?
             </h3>
             <p className="text-lg text-white max-w-3xl mx-auto">
               Discover the unique advantages of working with us through our interactive scroll experience
@@ -396,7 +396,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              What Our Employees Say
+              WHAT OUR EMPLOYEES SAY
             </h3>
             <p className="text-lg text-white">
               Hear from our team members on what makes ShoreAgents Careers a great place to work.
@@ -519,7 +519,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Recognitions & Certifications
+              RECOGNITIONS & CERTIFICATIONS
             </h3>
             <p className="text-lg text-gray-300">
               Our commitment to excellence recognized by industry leaders
@@ -553,7 +553,7 @@ export default function Home() {
       </section>
 
       {/* Technology & Workspace Section */}
-      <section id="technology" className="py-20 px-6 bg-gray-900">
+      <section id="technology" className="py-20 px-6 bg-gray-800">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-16"
@@ -563,7 +563,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Technology & Workspace
+              TECHNOLOGY & WORKSPACE
             </h3>
             <p className="text-lg text-white max-w-3xl mx-auto">
               Discover our amazing office amenities designed for productivity and comfort with state-of-the-art technology and equipment to support your success
@@ -981,7 +981,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-            Candidate Careers Form
+            CANDIDATE CAREERS FORM
           </h3>
             <p className="text-base text-white mb-6 max-w-4xl mx-auto">
               <strong>Work with us!</strong> Unlimited earning potential while you upskill your career working for the fastest growing Real Estate BPO company located in the Clark Freeport Zone.
@@ -1280,153 +1280,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Enhanced Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gray-800">
-        <div className="container mx-auto max-w-7xl">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              GET IN TOUCH
-            </h3>
-            <p className="text-lg text-white max-w-3xl mx-auto">
-              Ready to start your career journey? Connect with us and explore opportunities together.
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <motion.div 
-              className="space-y-8"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              {/* Office Address */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Office Address</h4>
-                <div className="space-y-3">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-gray-700 dark:text-gray-300 font-medium">Clark Freeport Zone</p>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Pampanga, Philippines</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-
-              {/* Contact Details */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-              </div>
-                    <div>
-                      <p className="text-gray-700 dark:text-gray-300 font-medium">Email</p>
-                      <a href="mailto:recruitment@shoreagents.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        recruitment@shoreagents.com
-                      </a>
-              </div>
-            </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-          </div>
-                    <div>
-                      <p className="text-gray-700 dark:text-gray-300 font-medium">Phone</p>
-                      <a href="tel:+639123456789" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        +63 912 345 6789
-                      </a>
-        </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Contact Form */}
-            <motion.div 
-              className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h4 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Send us a Message</h4>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="contactName" className="text-gray-700 dark:text-gray-300">Full Name *</Label>
-                    <Input 
-                      id="contactName" 
-                      placeholder="Your full name" 
-                      className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
-                      required 
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="contactEmail" className="text-gray-700 dark:text-gray-300">Email Address *</Label>
-                    <Input 
-                      id="contactEmail" 
-                      type="email" 
-                      placeholder="your.email@example.com" 
-                      className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
-                      required 
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="contactSubject" className="text-gray-700 dark:text-gray-300">Subject *</Label>
-                  <Input 
-                    id="contactSubject" 
-                    placeholder="What's this about?" 
-                    className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
-                    required 
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="contactMessage" className="text-gray-700 dark:text-gray-300">Message *</Label>
-                  <Textarea 
-                    id="contactMessage" 
-                    placeholder="Tell us how we can help you..." 
-                    className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
-                    required 
-                  />
-                </div>
-                <motion.button 
-                  type="submit"
-                  className={twMerge(
-                    "w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full",
-                    "transition-all duration-300 shadow-lg hover:shadow-xl",
-                    "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                  )}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Send Message
-                </motion.button>
-              </form>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
@@ -1458,7 +1311,7 @@ export default function Home() {
               </summary>
               <div className="px-6 pb-6">
                 <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Depending on clients' business needs, we offer Day, Night, and Mid shifts.
+                  Depending on clients&apos; business needs, we offer Day, Night, and Mid shifts.
                 </p>
               </div>
             </motion.details>
@@ -1597,7 +1450,7 @@ export default function Home() {
                   There are 3 interviews in the recruitment process:<br />
                   1.) The verification interview is done via phone call.<br />
                   2.) The company interview is carried out through Zoom meetings.<br />
-                  3.) The client interview happens on various online meeting platforms, depending on the client's preference.
+                  3.) The client interview happens on various online meeting platforms, depending on the client&apos;s preference.
                 </p>
               </div>
             </motion.details>
@@ -1630,7 +1483,7 @@ export default function Home() {
             >
               <summary className="p-6 cursor-pointer list-none">
                 <h4 className="text-base font-semibold text-gray-900 dark:text-white">
-                  What is the company's culture?
+                  What is the company&apos;s culture?
                 </h4>
               </summary>
               <div className="px-6 pb-6">
@@ -1639,6 +1492,153 @@ export default function Home() {
                 </p>
               </div>
             </motion.details>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Contact Section */}
+      <section id="contact" className="py-20 px-6 bg-gray-800">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              GET IN TOUCH
+            </h3>
+            <p className="text-lg text-white max-w-3xl mx-auto">
+              Ready to start your career journey? Connect with us and explore opportunities together.
+            </p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {/* Office Address */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Office Address</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300 font-medium">Clark Freeport Zone</p>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Pampanga, Philippines</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            {/* Contact Details */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+              </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300 font-medium">Email</p>
+                      <a href="mailto:recruitment@shoreagents.com" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        recruitment@shoreagents.com
+                      </a>
+              </div>
+            </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-4 h-4 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+          </div>
+                    <div>
+                      <p className="text-gray-700 dark:text-gray-300 font-medium">Phone</p>
+                      <a href="tel:+639123456789" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        +63 912 345 6789
+                      </a>
+        </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Contact Form */}
+            <motion.div 
+              className="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Send us a Message</h4>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="contactName" className="text-gray-700 dark:text-gray-300">Full Name *</Label>
+                    <Input 
+                      id="contactName" 
+                      placeholder="Your full name" 
+                      className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+                      required 
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="contactEmail" className="text-gray-700 dark:text-gray-300">Email Address *</Label>
+                    <Input 
+                      id="contactEmail" 
+                      type="email" 
+                      placeholder="your.email@example.com" 
+                      className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+                      required 
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="contactSubject" className="text-gray-700 dark:text-gray-300">Subject *</Label>
+                  <Input 
+                    id="contactSubject" 
+                    placeholder="What's this about?" 
+                    className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500"
+                    required 
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="contactMessage" className="text-gray-700 dark:text-gray-300">Message *</Label>
+                  <Textarea 
+                    id="contactMessage" 
+                    placeholder="Tell us how we can help you..." 
+                    className="rounded-xl border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
+                    required 
+                  />
+                </div>
+                <motion.button 
+                  type="submit"
+                  className={twMerge(
+                    "w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full",
+                    "transition-all duration-300 shadow-lg hover:shadow-xl",
+                    "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  )}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Send Message
+                </motion.button>
+              </form>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -77,7 +77,7 @@ export const StickyScrollReveal = ({
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className="text-2xl font-bold text-white"
+                className="text-2xl font-bold text-white mb-4 h-12 flex items-center"
               >
                 {item.title}
               </motion.div>
@@ -93,7 +93,7 @@ export const StickyScrollReveal = ({
                   duration: 0.3,
                   ease: "easeInOut"
                 }}
-                className="text-lg text-white max-w-sm mt-10"
+                className="text-lg text-white max-w-sm mt-6"
               >
                 {item.description}
               </motion.div>
